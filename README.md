@@ -14,9 +14,6 @@ both MongoDB and SQL.
 npm install @maxal_studio/kratosjs-plugin-profile
 ```
 
-> Testing against a local, unpublished build of KratosJs? See
-> [Developing & Testing Plugins Locally](../../nodejs-kratosjs/docs/plugins/local-development.md).
-
 ## Register
 
 **Server** (`src/index.ts`):
