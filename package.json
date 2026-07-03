@@ -1,6 +1,6 @@
 {
   "name": "@maxal_studio/kratosjs-plugin-profile",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "User profile page (edit details + change password) for KratosJs panels",
   "main": "./dist/server/index.js",
   "types": "./dist/server/index.d.ts",
