@@ -1,6 +1,6 @@
 {
   "name": "@maxal_studio/kratosjs-plugin-profile",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "User profile page (edit details + change password) for KratosJs panels",
   "main": "./dist/server/index.js",
   "types": "./dist/server/index.d.ts",
@@ -33,8 +33,8 @@
     "bcrypt": "^6.0.0"
   },
   "peerDependencies": {
-    "@maxal_studio/kratosjs-react": "^1.0.0",
-    "@maxal_studio/kratosjs": "^1.0.0",
+    "@maxal_studio/kratosjs-react": "^2.0.0",
+    "@maxal_studio/kratosjs": "^2.0.0",
     "react": "^19.0.0"
   },
   "devDependencies": {
