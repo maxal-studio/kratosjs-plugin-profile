@@ -3,6 +3,7 @@ import {
   Panel,
   KratosRequest,
   KratosReply,
+  adminRoute,
 } from "@maxal_studio/kratosjs";
 import { ProfilePage } from "./ProfilePage";
 import {
@@ -48,11 +49,20 @@ export class ProfilePlugin extends Plugin {
       };
     };
 
-    panel.registerRoute("get", "/profile", attachPanel(viewProfile));
-    panel.registerRoute("post", "/profile/update", attachPanel(updateProfile));
-    panel.registerRoute(
+    // `adminRoute` prepends the panel's base path and requires auth. It is required:
+    // without it `route()` registers a bare, public, top-level path, which would expose
+    // profile reads and let anyone change a password unauthenticated.
+    panel.route("get", "/profile", adminRoute(panel), attachPanel(viewProfile));
+    panel.route(
+      "post",
+      "/profile/update",
+      adminRoute(panel),
+      attachPanel(updateProfile),
+    );
+    panel.route(
       "post",
       "/profile/change-password",
+      adminRoute(panel),
       attachPanel(changePassword),
     );
   }
